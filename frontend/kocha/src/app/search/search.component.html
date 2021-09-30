@@ -1,0 +1,33 @@
+<body>
+    <div class="container">
+        <div id="content">
+          <form class='form-inline'>
+            <div class="input-group">
+              <input type='text' id='search' name="search" #search (keyup.enter)="searchSports(search.value)"  class="form-control search-form" placeholder="Search">
+              <span class="input-group-btn" style="width:39px">
+                <button id="search-this" (click)="searchSports(search.value)" type="button" class="pull-right btn btn-default search-btn">
+                    <i class="fa fa-search"></i>
+                </button>
+              </span>
+            </div>
+          </form>
+          
+          <p class="text-center">Search for some offered sports</p>
+          
+          
+      </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+            <div class="col" *ngFor='let sport of sports'>
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">{{ sport.sport_name }}</h5>
+                  <p class="card-text">{{ sport.description }}.</p>
+                </div>
+              </div>
+            </div>    
+        </div>
+    </div>
+</body>

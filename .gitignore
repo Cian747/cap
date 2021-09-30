@@ -1,0 +1,6 @@
+virtual/
+page.html
+.vscode
+notes.txt
+*.pyc
+.env
